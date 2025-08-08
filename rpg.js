@@ -159,3 +159,38 @@ console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
 
 // === CONTINUAÇÃO DA SAGA ÉPICA - NÍVEL 3 ===
 
+nivelPersonagem++;
+let local = "Castelo dos Arrays"
+
+console.log(`Após enfrentar uma árdua batalha com ${inimigoAtual} e derrota-ló, ${nomePersonagem} enfrenta uma nova missão. Ela deve explorar as masmorras mais profundas do ${local}`);
+
+// Novos elementos para o castelo (inventário mágico - primeira coleção arcana)
+
+let inventario = ["Poção de Vida", "Arco de Gelo", "Armadura do Dragão"];
+let aliados = ["Arqueira Emma", "Guerreiro Nezha", "Mago Kitay", "Guerreiro Altan"];
+let inimigos = ["Vaisra", "Su Daji", "Moag"];
+let salas = ["Biblioteca do Tempo", "Armadilha de Chamas", "Torre do Dragão", "Sala dos Caldeirões"];
+let tesouroColetado = [];
+
+console.log(`🏰 - ${nomePersonagem} adentra ${local}`);
+console.log(`Inventário inicial: ${inventario.length} itens mágicos`);
+
+// CAPÍTULO 1
+
+console.log(`${nomePersonagem} explora o castelo e encontra os determinados cômodos: ${salas} além de outros locais que não possuiam nada que poderia auxilia-lá em sua missão. Os nomes foram tirados exclusivamente da criatividade de ${nomePersonagem}.`);
+
+let pocoes = ["Agilidade Extra", "Flor de Papoula", "Cura do Dragão"];
+
+console.log(`${nomePersonagem} encontrou ${pocoes.length} poções mágicas, porém uma chamou mais sua atenção que as outras sendo ela a de ${pocoes[1]}`);
+
+let pocaoQuebrada = pocoes.shift();
+
+console.log(`Por conta de um descuido de ${nomePersonagem} a poção de ${pocaoQuebrada} acabou caindo e se estilhaçando no piso de pedras`);
+
+// Modificando elemento específico
+inventario[0] = "Poção de Vida Suprema";
+
+// Métodos de array fundamentais
+
+inventario.push("Coroa de Papoulas");
+console.log(`Durante sua busca pelas masmorras profundas ${nomePersonagem} se depara com um novo item para o seu inventário a ${inventario[3]}.`);
