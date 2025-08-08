@@ -156,3 +156,6 @@ if (poderInimigo <=150) {
 
 console.log("");
 console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
+
+// === CONTINUAÇÃO DA SAGA ÉPICA - NÍVEL 3 ===
+
