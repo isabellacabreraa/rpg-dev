@@ -90,6 +90,8 @@ let localAtual = "Florestas Binárias";
 let inimigoAtual = "Guardião da Última Firewall";
 let missaoAtual = "derrotar o Guardião e proteger a última Firewall";
 
+// PRÓLOGO 
+
 console.log(`Se camuflando nas sombras da escuridão das ${localAtual}, ${nome} se encontra procurando seu inimigo o ${inimigoAtual} para completar a missão que foi determinada a ela de ${missaoAtual}.`);
 
 // Capítulo 01
@@ -117,3 +119,40 @@ if (vidaPersonagem >= 80) {
 
 // Capítulo 03
 
+let poderInimigo = 25;
+
+console.log(`Depois de longas horas caminhando pelo terreno com elevações e perigos ${nomePersonagem} finalmente encontra seu inimigo o ${inimigoAtual}`);
+console.log(`Após uma intensa troca de olhares em busca de descobrir quem daria o primeiro golpe, ${nomePersonagem} se cansa da enrolação e atira a primeira flecha. `);
+
+
+if (vidaPersonagem >= 150) {
+    console.log(`Com pouca vida, ${nomePersonagem} deve fazer uma escolha que pode salvar ou ceifar sua vida`);
+    console.log(`${nomePersonagem} ataca com toda a força que resta em seu corpo`);
+    poderInimigo -= (forca * 2);
+} else if (manaAtual >= 30 && classe === "Guerreira") {
+    console.log(`${nomePersonagem} centraliza toda a sua força e suas habilidades com espada para derrotar seu inimigo o ${inimigoAtual}`);
+    console.log("Que habilidade indescritível!!");
+    poderInimigo -= (forca + 20);
+    manaAtual -+ 30;
+} else if (agilidade >= 15) {
+    console.log("Com sua agilidade extrema, executa um ataque tão gracioso que poderia ser facilmente uma apresentação de cisne negro.. ou devemos dizer cisne em chamas");
+    poderInimigo -= forca;
+} else {
+    console.log(`${nomePersonagem} se defente e ataca com uma habilidade e eficácia sem iguais. Suas flechas acertão os locais escolhidos com precisão, e quando essas se esgotão sua força e agilidade a ajudam a se defender de maneira eficaz`);
+    poderInimigo -= (forca / 2);
+    vida += 10;
+    
+}
+
+// EPÍLOGO 
+
+if (poderInimigo <=150) {
+    console.log(`VITÓRIA!! ${nomePersonagem} vence seu inimigo ${inimigoAtual}`);
+    esperiencia += 100;
+    combatesVencidos++;
+    console.log(`Uma nova lenda surge como uma fênix em chamas... `);
+} else { console.log("⚔️ A batalha foi árdua, mas " + nomePersonagem + " sobrevive para lutar outro dia!");
+}
+
+console.log("");
+console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
