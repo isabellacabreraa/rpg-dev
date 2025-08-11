@@ -175,8 +175,6 @@ let tesouroColetado = [];
 console.log(`🏰 - ${nomePersonagem} adentra ${local}`);
 console.log(`Inventário inicial: ${inventario.length} itens mágicos`);
 
-// CAPÍTULO 1
-
 console.log(`${nomePersonagem} explora o castelo e encontra os determinados cômodos: ${salas} além de outros locais que não possuiam nada que poderia auxilia-lá em sua missão. Os nomes foram tirados exclusivamente da criatividade de ${nomePersonagem}.`);
 
 let pocoes = ["Agilidade Extra", "Flor de Papoula", "Cura do Dragão"];
@@ -194,3 +192,113 @@ inventario[0] = "Poção de Vida Suprema";
 
 inventario.push("Coroa de Papoulas");
 console.log(`Durante sua busca pelas masmorras profundas ${nomePersonagem} se depara com um novo item para o seu inventário a ${inventario[3]}.`);
+
+
+
+console.log("Porém com novos aliados também surgem novos inimigos");
+
+for (let i = 0; i < inimigos.length; i++) {
+   console.log("Inimigos" + (i+1) + ":" + inimigos[i]);
+}
+
+
+if (vidaPersonagem => 100) {
+    console.log(`${nomePersonagem} encontrou novos pergaminhos perdidos pelo caminho com ajuda de ${aliados[1]}.`);
+} else {
+    console.log(`O tempo distorce ao redor do ${nomePersonagem}!`);
+    vidaPersonagem -= 10;
+}
+
+
+// Recrutando aliados com for tradicional
+console.log(`${nomePersonagem} convoca seus aliados para a batalha final`);
+
+for (let i = 0; i < aliados.length; i++) {
+let aliado = aliados[i];
+console.log(" Aliado " + (i + 1) + ": " + aliado + " se junta à missão!");
+} 
+
+if ( manaAtual => 30) { 
+    console.log(" Como líder mágico, " + aliados + " multiplica o poder da equipe!");
+    ouro += 50;
+    } else if (i === 1) { 
+    console.log(" Como defensor principal, " + aliados + " fortalece a resistência!");
+    vidaMaxima += 30;
+    } else { 
+    console.log("Como especialista, " + aliados + " aprimora táticas de combate!");
+    experiencia += 40;
+    }
+    
+    console.log("Equipe completa! Ouro: " + ouro + " | Vida atual: " + vidaPersonagem);
+
+
+    let danoRecebido = [];
+
+console.log(+ nomePersonagem + " enfrenta " + inimigos.length + " inimigos épicos!");
+
+
+for (let i = 0; i < inimigos.length; i++) {
+let inimigo = inimigos[i];
+let dano = Math.floor(Math.random() * 30) + 10; 
+
+console.log(" Rodada " + (i + 1) + " - Enfrentando: " + inimigos);
+console.log(  + nomePersonagem + " causa " + dano + " de dano!");
+
+danoRecebido.push(dano); 
+
+
+if (i === 0) {
+console.log("Primeira vitória! Cristais fragmentados concedem bônus!");
+tesouroColetado.push("Fragmento de Cristal");
+} else if (i === 1) {
+console.log("Segunda batalha! As sombras drenam energia, mas " + nomePersonagem + " resiste!");
+vidaPersonagem -= 15;
+} else {
+console.log("Batalha final! O dragão recua! Vitória épica alcançada!");
+xp += 100;
+tesouroColetado.push("Escama Dragônica");
+}
+}
+
+
+let danoTotal = 0;
+for (let i = 0; i < danoRecebido.length; i++) {
+danoTotal += danoRecebido[i];
+console.log(" Rodada " + (i + 1) + " - Dano: " + danoRecebido[i]);
+}
+
+console.log("Dano total causado: " + danoTotal);
+console.log("Tesouros coletados: " + tesouroColetado.length + " itens épicos!");
+
+// === EPÍLOGO: O MESTRE DOS ARRAYS ===
+console.log("");
+console.log("👑 === EPÍLOGO: " + nomePersonagem + " - CONQUISTADOR DO CASTELO ===");
+
+// Estatísticas finais da jornada
+console.log("📈 Estatísticas Finais da Aventura:");
+console.log("• Nível alcançado: " + nivel);
+console.log("• Experiência total: " + xp);
+console.log("• Vida restante: " + vidaPersonagem);
+console.log("• Ouro acumulado: " + ouro);
+console.log("• Itens no inventário: " + inventario.length);
+console.log("• Aliados conquistados: " + aliados.length);
+console.log("• Tesouros épicos: " + tesouroColetado.length);
+
+
+console.log("");
+console.log("A LENDA CONTINUA...");
+console.log("Após conquistar o Castelo dos Arrays, " + nomePersonagem + " emergiu transformado.");
+console.log("O domínio sobre as coleções arcanas fluía em suas veias como magia pura.");
+console.log("Cada loop executado havia forjado sua mente em algoritmos de ferro e determinação.");
+console.log("Os arrays sussurravam segredos ancestrais, revelando padrões ocultos da realidade.");
+console.log("Aliados admiravam sua capacidade de organizar caos em estruturas harmoniosas.");
+console.log("O inventário repleto de artefatos místicos brilhava com poder recém-descoberto.");
+console.log("Mas no horizonte, novas aventuras aguardavam o Mestre dos Códigos Arcanos.");
+console.log("Rumores falavam de torres onde funções aguardavam para serem dominadas.");
+console.log("E objetos legendários que guardariam os segredos da programação orientada.");
+console.log("A jornada estava longe do fim - era apenas o início de uma saga maior.");
+console.log("Pois " + nomePersonagem + " havia provado ser digno do título supremo:");
+console.log("A ARQUEIRA EM CHAMAS");
+
+console.log("");
+console.log(" FIM DO NÍVEL 3 | AGUARDE FUTURAS AVENTURAS NA ACADEMIA DOS CÓDIGOS! ");
